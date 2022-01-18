@@ -1,4 +1,4 @@
-	from django import forms
+from django import forms
 
 from .validators import validate_url, validate_dot_com
 
@@ -8,7 +8,7 @@ class SubmitUrlForm(forms.Form):
 		validators=[validate_url, validate_dot_com],
 		widget= forms.TextInput(
 				attrs={
-						"placeholder": "Long URL",
+						"placeholder": "Long Long URL",
 						"class": "form-control"
 				}
 			)

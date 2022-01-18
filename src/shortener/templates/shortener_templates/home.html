@@ -2,18 +2,65 @@
 
 {% block content %}
 
+{% block styles %}
+<style>
+	body {
+	background-color: #6e2ac4;
+	background-image: url('https://www.technocrazed.com/wp-content/uploads/2015/12/HD-Space-Wallpaper-For-Background-23.jpg');
+	background-size: cover;
+}
+	html,body{ margin: 0;}
+	.container {
+		height: 100vh;
+	}
+	.cent_cont{
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -100px;
+		margin-left: -100px;
+		text-align: center;
+		color: beige;
+	}
+	.btn-link{
+		color: beige;
+		text-shadow: none;
+	}
+		.btn-link:hover {
+			color: black;
+		}
+
+</style>
+
+{% endblock styles %}
 <div class="container">
-	<div class="row">
-		<div class="text-center col-sm-12">
-			<h1>{{ title }}</h1>
-			<div class="col-sm-4 col-sm-offset-4 ">
-				<form method="POST", action="."> {% csrf_token %}
-					<!--<input type="text" placeholder="url" />-->
-					{{ form.as_p }}
-					<input class="btn btn-primary"type="submit" value="shortener" />
-				</form>
-			</div>
-		</div>
+	<div class="cent_cont">
+		<h1 >{{ title }}</h1>
+		<p class="lead">Shorten a URL</p>
+		<form method="POST", action="."> {% csrf_token %}
+			<!--<input type="text" placeholder="url" />-->
+			{{ form.as_p }}
+			<input class="btn btn-secondary"type="submit" value="shortener &raquo;" />
+		</form>
 	</div>
 </div>
+
+<!-- <style>
+	html,body{ margin: 0;}
+	.container {
+		height: 100vh;
+	}
+	.cent_cont{
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -100px;
+		margin-left: -100px;
+		text-align: center;
+	}
+</style> -->
 {% endblock content %}

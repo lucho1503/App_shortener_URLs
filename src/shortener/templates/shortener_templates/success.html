@@ -5,11 +5,13 @@
 {% endblock title %}
 
 {% block content %}
-<div style="align-text: center; width: 800px; margin: 0 auto;">
-	<h1>Created!</h1>
-	<p> {{ object.url }}</p>
+<div class="container">
+	<div class="cent_cont">
+		<h1>Created!</h1>
+		<p> {{ object.url }}</p>
 
-	<p><a href="{{ object.get_short_url }}"> {{ object.get_short_url }} </a> </p> 	
-	<a class="btn btn-defalut"href="/">+New</a>
+		<p><a href="{{ object.get_short_url }}"> {{ object.get_short_url }} </a> </p> 	
+		<a class="btn btn-dark"href="/">+New</a>
+	</div>
 </div>
 {% endblock content %}

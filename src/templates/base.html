@@ -6,6 +6,31 @@
 
 
 </head>
+{% block styles %}
+<style>
+	body {
+	background-color: #6e2ac4;
+	/* background-image: url('https://www.technocrazed.com/wp-content/uploads/2015/12/HD-Space-Wallpaper-For-Background-23.jpg'); */
+	background-size: cover;
+}
+
+	html,body{ margin: 0;}
+	.container {
+		height: 100vh;
+	}
+	.cent_cont{
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -100px;
+		margin-left: -100px;
+		text-align: center;
+		color: beige;
+	}
+</style>
+{% endblock styles %}
 <body>
 	{% block content %}
 	{% endblock content %}
